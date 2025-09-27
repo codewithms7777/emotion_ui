@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emotion UI Customizer</title>
+  <style>
+    body {
+      transition: all 0.5s ease;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 20px;
+    }
+    video {
+      width: 320px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Emotion-Powered UI</h1>
+  <video id="video" autoplay muted playsinline></video>
+  <audio id="bg-music" loop></audio>
+  <div id="mood-display" style="text-align: center; margin-top: 20px;">
+    <img id="mood-emoji" src="" width="200" style="display: none;" />
+    <p id="mood-text" style="font-size: 1.5rem; font-weight: bold;"></p>
+  </div>
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
